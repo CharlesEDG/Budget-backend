@@ -32,7 +32,7 @@ export const Login = async (req, res) => {
             });
         }
        
-        const jwtSecret = process.env.JWT_SECRET;
+        const jwtSecret = 'dineros';
       
         const authToken = jwt.sign({ id: checkUser.id}, jwtSecret, { expiresIn: '3h' });
 
