@@ -8,16 +8,10 @@ import cookieParser from 'cookie-parser';
 
 const app = express();
 
-const corsOptions = {
-    origin: 'https://budget-backend-production-f511.up.railway.app'
-  };
-  
-  app.use(cors(corsOptions));
-
-// app.use(cors({ 
-//     origin : true,
-//     credentials: true
-// }))
+app.use(cors({ 
+    origin : true,
+    credentials: true
+}))
 
 // app.use(cors());
 app.use(cookieParser())
