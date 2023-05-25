@@ -4,7 +4,7 @@ export const auth = async (req, res, next) => {
     
     try {
     
-        const jwtSecret = process.env.JWT_SECRET;
+        const jwtSecret = 'dineros';
         const { authorization } = req.headers;
         console.log(authorization);
         
