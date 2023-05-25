@@ -3,8 +3,8 @@ import { config } from "dotenv";
 
 config();
 
-export const sequelize = new Sequelize(process.env.PGDATABASE, process.env.PGUSER, process.env.PGPASSWORD, {
-    host: process.env.PGHOST,
-    port: process.env.PGPORT,
+export const sequelize = new Sequelize('railway', 'postgres', 'Y2meu9P1mjLT2Ew7vzd0', {
+    host: 'containers-us-west-139.railway.app',
+    port: '5846',
     dialect: 'postgres'
 });
