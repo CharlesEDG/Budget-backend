@@ -36,7 +36,7 @@ export const Login = async (req, res) => {
       
         const authToken = jwt.sign({ id: checkUser.id}, jwtSecret, { expiresIn: '3h' });
 
-        // res.cookie('authorization', authToken);
+        res.cookie('authorization', authToken);
 
         return res.status(200).json({
             token: authToken,
